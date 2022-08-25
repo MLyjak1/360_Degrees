@@ -1,0 +1,91 @@
+<html lang="en_US">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>360 Degrees</title>
+    <!--Import materialize.css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Overpass&family=Roboto+Condensed:wght@400;700&family=Special+Elite&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    {{!-- navbar --}}
+    <nav>
+      <div class="nav-wrapper navbar">
+        <a href="/" class="title">🎓360°</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="waves-effect waves-light btn button-style button-text" href="/degree">Degrees
+              <i class="material-icons right button-style">assessment</i></a></li>
+          <li><a class="waves-effect waves-light btn button-style button-text" href="/review">Reviews
+              <i class="material-icons right button-style">forum</i></a></li>
+          <li><a class="waves-effect waves-light btn button-style button-text" href="/login">Login
+              <i class="material-icons right button-style">key</i></a></li>
+          {{#unless loggedIn}}
+          <li><a class="waves-effect waves-light btn button-style button-text" href="/signup">Sign Up
+              <i class="material-icons right button-style">person</i></a></li>
+          {{/unless}}
+        </ul>
+      </div>
+    </nav>
+    {{!-- mobile response navbar --}}
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/degree">Degrees</a></li>
+      <li><a href="/review">Reviews</a></li>
+      <li><a href="/login">Login</a></li>
+      {{#unless loggedIn}}
+      <li><a href="/signup">Sign Up</a></li>
+      {{/unless}}
+    </ul>
+
+    {{!-- Parallax image for website --}}
+    <div class="parallax-container">
+      <div class="parallax"><img src="/images/360-Degrees.jpg" alt="360-background-image"/></div>
+    </div>
+
+    <div class="body">
+      <div class="row containter">
+    {{!-- ALlow main handlebars to connect to other handlebars --}}
+
+    {{{body}}}
+      </div>
+    </div>
+
+    {{!-- Footer --}}
+    <footer class="page-footer footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="footer-text footer-title">360 Degrees</h5>
+            <p class="footer-text foot-text">Brought to you from the Georgia Tech Boot Camp.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="footer-text footer-title">Contributors</h5>
+            <ul>
+              <li><a class="footer-text foot-text" href="https://github.com/Chromodyne">Devin Sinitiere</a></li>
+              <li><a class="footer-text foot-text" href="https://github.com/MLyjak1">Matthew Lyjak</a></li>
+              <li><a class="footer-text foot-text" href="https://github.com/Saameer19">Saameer Virani</a></li>
+              <li><a class="footer-text foot-text" href="https://github.com/jfranklin12">Julian Franklin</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container footer-text foot-text">
+          © 2022 360°
+        </div>
+      </div>
+    </footer>
+  
+  <script src="js/parallax.js"></script>
+  
+  </body>
+
+</html>

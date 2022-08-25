@@ -1,0 +1,18 @@
+<div class="container">
+<h1 class="center-align main-title">360 Degrees</h1>
+<h3 class="center-align sub-title">A full view of your future arc.</h3>
+<div class="row center-align">
+<a class="btn-large button-style button-text" href="/degree">View Reviews</a>
+
+{{#unless loggedIn}}
+<a class="btn-large button-style button-text" href="/signup">Share your View</a>
+
+{{#if User}}
+<a class="btn-large button-style button-text" href="/login">Share your View</a>
+{{else loggedIn}}
+<a class="btn-large button-style button-text" href="/review">Share your View</a>
+{{/if}}
+{{/unless}}
+</div>
+</div>
+</div>

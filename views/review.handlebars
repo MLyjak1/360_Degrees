@@ -1,0 +1,22 @@
+<div class="container">
+<h1 class="review-title">Reviews</h1>
+    {{#each reviews as |review|}}
+    <div class="row">
+        <div class="col s12">
+            <div class="card new-review">
+                <div class="card-content white-text">
+                    <span class="card-title">Degree Name</span>
+                    <div class="card-action review-comment">
+                        <a>Overall: {{review.score_1}}</a>
+                        <a>Employment: {{review.score_2}}</a>
+                        <a>Salary: {{review.score_3}}</a>
+                        <a>Work/Life Balance: {{review.score_4}}</a>
+                    </div>
+                    <p class="review-comment">{{review.comment}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
